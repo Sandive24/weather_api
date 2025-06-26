@@ -1,79 +1,83 @@
-# 🌤️ Aplikasi Cek Cuaca - Python + Flet + WeatherAPI
+# ☔️ WeatherApp: Real-Time Cuaca Dashboard
 
-Aplikasi desktop GUI untuk menampilkan informasi cuaca berdasarkan nama kota. Dibuat dengan framework **[Flet](https://flet.dev/)** dan mengambil data dari **[WeatherAPI](https://www.weatherapi.com/)**.
-
----
-
-## 📦 Fitur Utama
-
-✅ Cek cuaca saat ini berdasarkan nama kota  
-✅ Mendukung suhu dalam °C dan °F  
-✅ Tampilkan informasi seperti:
-- Kota, negara, waktu lokal
-- Kecepatan & arah angin
-- Curah hujan
-- Deskripsi kondisi cuaca
-- Icon siang/malam
-
-✅ Arah angin ditampilkan dalam bahasa Indonesia  
-✅ Antarmuka responsif dan modern
+Aplikasi desktop GUI untuk menampilkan informasi cuaca terkini berdasarkan nama kota, dikembangkan menggunakan **Flet** dan terintegrasi dengan **WeatherAPI**.
 
 ---
 
-## 🧰 Persyaratan
+## 📅 Fitur Utama
 
-- Python 3.8+
-- Koneksi internet aktif
-- API Key dari [WeatherAPI.com](https://www.weatherapi.com/)  
-  **Sekarang disimpan di file `apikey.json` untuk alasan privasi**
-- Library Flet & Requests
-
----
-
-## 🔑 Cara Menyimpan API Key
-
-1. Buat file baru bernama `apikey.json` di direktori utama project.
-2. Isi file tersebut dengan format berikut:
-   ```json
-   {
-     "apikey": "API_KEY_ANDA"
-   }
-   ```
-   Ganti `API_KEY_ANDA` dengan API key milik Anda dari WeatherAPI.
+* ✅ Cek cuaca real-time berdasarkan nama kota
+* ✅ Tampilkan suhu dalam °C dan °F
+* ✅ Detail lokasi: kota, negara, waktu lokal
+* ✅ Kecepatan & arah angin (diterjemahkan dalam Bahasa Indonesia)
+* ✅ Informasi cuaca lengkap: curah hujan, deskripsi, ikon siang/malam
+* ✅ Tampilan responsif, bersih, dan modern
 
 ---
 
-## 🌐 Endpoint WeatherAPI
+## 🦠 Persyaratan Sistem
 
-Aplikasi ini menggunakan endpoint berikut untuk mengambil data cuaca:
+* Python 3.8 atau lebih baru
+* Koneksi internet aktif
+* API Key dari [WeatherAPI](https://www.weatherapi.com/)
+* File konfigurasi: `apikey.json`
+
+**Dependensi Python:**
+
+```
+requests
+flet
+```
+
+---
+
+## 🔐 Konfigurasi API Key
+
+1. Buat file `apikey.json` di direktori utama.
+2. Isi dengan format berikut:
+
+```json
+{
+  "apikey": "API_KEY_ANDA"
+}
+```
+
+> ⚠️ **Catatan:** Jangan unggah file ini ke repository publik.
+
+---
+
+## 🌐 Endpoint API
+
+Aplikasi menggunakan endpoint berikut:
+
 ```
 https://api.weatherapi.com/v1/current.json
 ```
-Parameter yang digunakan:  
-- `key` (API Key Anda)
-- `q` (nama kota)
-- `lang=id` (bahasa Indonesia)
 
-Contoh request:
+**Parameter utama:**
+
+* `key` : API Key Anda
+* `q` : Nama kota (misal: Jakarta)
+* `lang=id` : Bahasa Indonesia
+
+**Contoh URL:**
+
 ```
 https://api.weatherapi.com/v1/current.json?key=API_KEY_ANDA&q=Jakarta&lang=id
 ```
 
 ---
 
-## ⚙️ Instalasi
+## ⚙️ Instalasi & Setup
 
-1. **Clone atau download project ini**
-2. **(Opsional) Buat virtual environment**  
-   ```bash
-   python -m venv API_Env
-   API_Env\Scripts\activate
-   ```
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. **Simpan API key Anda di file `apikey.json` seperti petunjuk di atas**
+```bash
+# (Opsional) Buat virtual environment
+python -m venv env
+env\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
 
 ---
 
@@ -85,4 +89,10 @@ python main.py
 
 ---
 
-## Ahmad Nur Ikhsan
+## ⚠️ Disclaimer
+
+Aplikasi ini dikembangkan sebagai media pembelajaran dan eksperimen integrasi API. Tidak disarankan untuk digunakan secara komersial.
+
+---
+
+*Dibuat dengan ❤️ oleh: **Ahmad Nur Ikhsan***
